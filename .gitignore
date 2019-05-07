@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CalculatePi/v16/.suo
+/.vs
+/CalculatePi/.vs/CalculatePi/v16
+/CalculatePi/CalculatePi/bin/Debug/netstandard2.0
+/CalculatePi/CalculatePi/obj
+/CalculatePi/CalculatePi.Test/bin/Debug/netcoreapp2.1
+/CalculatePi/CalculatePi.Test/obj/Debug/netcoreapp2.1
+/CalculatePi/CalculatePi.Test/obj
