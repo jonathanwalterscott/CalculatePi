@@ -12,25 +12,26 @@ namespace Tests
         }
 
         [Test]
-        [TestCase(1000, 0.0005)]
-        [TestCase(10000, 0.00006)]
-        [TestCase(1000000, 0.000001)]
-        public void Test_NumberOfIterations(int iterations, double expectedDifference)
+        [TestCase(1000, 0.14159265355858999)]
+        [TestCase(10000, 0.14159265358975975)]
+        [TestCase(1000000, 0.14159265358975975)]
+        public void Test_NumberOfIterations(int iterations, double expected)
         {
             var pi = new Nilikantha();
             pi.NumberOfIterations = iterations;
-            Assert.That(Math.Abs(0.14159265359 - pi.Calculate()), Is.LessThan(expectedDifference));
+            Assert.That(Math.Abs(expected - pi.Calculate()), Is.LessThan(0.000000001));
         }
 
         [Test]
-        [TestCase(0, 1000, 3.1410926)]
-        [TestCase(0, 1000000, 3.14159265359)]
-        [TestCase(500, 1000, 0.0004999)]
+        [TestCase(1, 10, 0.0082324013252137729)]
+        [TestCase(0, 1000, 0.14159265355858999)]
+        [TestCase(0, 1000000, 0.14159265358975975)]
+        [TestCase(5, 10, 0.00015901616204533196)]
         public void Test_Iterations(int startIteration, int numberOfIterations, double expected)
         {
             var pi = new Nilikantha();
             pi.Iterations(startIteration, numberOfIterations);
-            Assert.That(Math.Abs(expected - pi.Calculate()), Is.LessThan(0.000001));
+            Assert.That(Math.Abs(expected - pi.Calculate()), Is.LessThan(0.000000001));
         }
     }
 }
