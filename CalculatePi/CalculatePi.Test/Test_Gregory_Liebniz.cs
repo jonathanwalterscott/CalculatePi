@@ -4,7 +4,7 @@ using System;
 
 namespace Tests
 {
-    public class Tests
+    public class Test_Gregory_Liebniz
     {
         [SetUp]
         public void Setup()
