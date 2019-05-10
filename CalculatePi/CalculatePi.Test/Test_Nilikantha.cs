@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using CalculatePi.Pi;
+using CalculatePi.Library;
 using System;
 
 namespace Tests

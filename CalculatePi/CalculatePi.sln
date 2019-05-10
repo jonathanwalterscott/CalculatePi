@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatePi", "CalculatePi\CalculatePi.csproj", "{4B9088B1-0F13-4AC9-85F3-C09944DFEFB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatePi.Library", "CalculatePi\CalculatePi.Library.csproj", "{4B9088B1-0F13-4AC9-85F3-C09944DFEFB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatePi.Test", "CalculatePi.Test\CalculatePi.Test.csproj", "{89A0A19C-51DF-4C45-B4BD-DB50FA792259}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatePi.Library.Test", "CalculatePi.Test\CalculatePi.Library.Test.csproj", "{89A0A19C-51DF-4C45-B4BD-DB50FA792259}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4B9088B1-0F13-4AC9-85F3-C09944DFEFB4} = {4B9088B1-0F13-4AC9-85F3-C09944DFEFB4}
 	EndProjectSection

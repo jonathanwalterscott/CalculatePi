@@ -1,7 +1,7 @@
 ﻿
 namespace CalculatePi
 {
-    namespace Pi
+    namespace Library
     {
         public class Gregory_Leibniz
         {
