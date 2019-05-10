@@ -12,9 +12,9 @@ namespace Tests
         }
 
         [Test]
-        [TestCase(1000, 0.14159265355858999)]
-        [TestCase(10000, 0.14159265358975975)]
-        [TestCase(1000000, 0.14159265358975975)]
+        [TestCase(1000, 3.14159265355858999)]
+        [TestCase(10000, 3.14159265358975975)]
+        [TestCase(1000000, 3.14159265358975975)]
         public void Test_NumberOfIterations(int iterations, double expected)
         {
             var pi = new Nilikantha();
@@ -23,10 +23,10 @@ namespace Tests
         }
 
         [Test]
-        [TestCase(1, 10, 0.0082324013252137729)]
-        [TestCase(0, 1000, 0.14159265355858999)]
-        [TestCase(0, 1000000, 0.14159265358975975)]
-        [TestCase(5, 10, 0.00015901616204533196)]
+        [TestCase(1, 10, 3.0082324013252137729)]
+        [TestCase(0, 1000, 3.14159265355858999)]
+        [TestCase(0, 1000000, 3.14159265358975975)]
+        [TestCase(5, 10, 3.00015901616204533196)]
         public void Test_Iterations(int startIteration, int numberOfIterations, double expected)
         {
             var pi = new Nilikantha();
