@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatePi.Library.Test", 
 		{4B9088B1-0F13-4AC9-85F3-C09944DFEFB4} = {4B9088B1-0F13-4AC9-85F3-C09944DFEFB4}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatePi.CLI", "CalculatePi.CLI\CalculatePi.CLI.csproj", "{81C09B53-A273-4F37-906C-C5BFE7BA22B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{89A0A19C-51DF-4C45-B4BD-DB50FA792259}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89A0A19C-51DF-4C45-B4BD-DB50FA792259}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89A0A19C-51DF-4C45-B4BD-DB50FA792259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81C09B53-A273-4F37-906C-C5BFE7BA22B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81C09B53-A273-4F37-906C-C5BFE7BA22B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81C09B53-A273-4F37-906C-C5BFE7BA22B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81C09B53-A273-4F37-906C-C5BFE7BA22B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
