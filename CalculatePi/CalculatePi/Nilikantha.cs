@@ -3,18 +3,8 @@ namespace CalculatePi
 {
     namespace Library
     {
-        public class Nilikantha
+        public class Nilikantha : IterativeMethod
         {
-            #region
-            public int NumberOfIterations { get; set; }
-            public int StartIteration { get; set; }
-            public void Iterations(int start, int numberOfIterations)
-            {
-                StartIteration = start;
-                NumberOfIterations = numberOfIterations;
-            }
-            #endregion
-
             public Nilikantha()
             {
 
