@@ -10,7 +10,7 @@ namespace CalculatePi
 
             }
 
-            public double Calculate()
+            public override double Calculate()
             {
                 // TODO The formula below could be simplified a bit more to make it even faster
                 double result = 3.0;

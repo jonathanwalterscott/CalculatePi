@@ -10,7 +10,7 @@ namespace CalculatePi
 
             }
 
-            public double Calculate()
+            public override double Calculate()
             {
                 double result = 0.0;
                 for (int i = StartIteration; i < NumberOfIterations; i++)

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace CalculatePi.Library
 {
-    public class IterativeMethod
+    public abstract class IterativeMethod : IIterativeMethod
     {
         #region Properties
         public int NumberOfIterations { get; set; }
@@ -15,5 +12,7 @@ namespace CalculatePi.Library
             NumberOfIterations = numberOfIterations;
         }
         #endregion
+
+        public abstract double Calculate();
     }
 }
