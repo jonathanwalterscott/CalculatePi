@@ -22,9 +22,12 @@ namespace CalculatePi.CLI
         static void Run(CalculatePi_CLI_Options options)
         {
             var pi = new Gregory_Leibniz();
+            var stopWatch = new System.Diagnostics.Stopwatch();
             pi.NumberOfIterations = options.Iterations;
+            stopWatch.Start();
             var result = pi.Calculate();
-            Console.WriteLine($"Result = [{result}]");
+            stopWatch.Stop();
+            Console.WriteLine($"Result = [{result}] achieved in {stopWatch.ElapsedMilliseconds}ms");
         }
     }
 }
