@@ -16,3 +16,5 @@
 /CalculatePi/CalculatePi/bin/Release/netstandard2.0
 /CalculatePi/CalculatePi.CLI/bin/Release/netcoreapp2.1
 /CalculatePi/CalculatePi.Test/bin/Release/netcoreapp2.1
+/CalculatePi/CalculatePi.Web/bin/Debug/netcoreapp2.2
+/CalculatePi/CalculatePi.Web/obj
