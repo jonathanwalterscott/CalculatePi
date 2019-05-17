@@ -1,0 +1,18 @@
+#!/bin/bash
+cd /home/ubuntu/
+
+# install dotnet core
+# https://www.microsoft.com/net/core#linuxubuntu
+if [ ! -f /usr/bin/dotnet ]; then
+    apt-get install libunwind8
+
+    # wget https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-linux-x64.tar.gz -P /opt/dotnet/ \
+    wget https://download.visualstudio.microsoft.com/download/pr/ece856bb-de15-4df3-9677-67cc817ffc1b/521da52132d23deae5400b8e19e23691/dotnet-sdk-2.2.204-linux-x64.tar.gz -P /opt/dotnet/ \
+	&& sha512sum -c <<< "1ADD882C32A96AD564EF3F2A38FDC9282C6EE1C851BC59C22ADA911D36DBE5F2F839B428307510E3F93900246E0BBD4A277A9BD45F778DF4B889782D6867BF01 /opt/dotnet/dotnet-sdk-2.2.204-linux-x64.tar.gz" \
+    && tar -xvzf /opt/dotnet/dotnet-sdk-2.2.204-linux-x64.tar.gz -C /opt/dotnet/ \
+    && ln -sf /opt/dotnet/dotnet /usr/bin/dotnet \
+    && rm /opt/dotnet/dotnet-sdk-2.2.204-linux-x64.tar.gz
+fi
+
+# first time running dotnet tool requires setting up package cache
+dotnet nuget
