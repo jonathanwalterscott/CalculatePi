@@ -1,0 +1,16 @@
+﻿@page
+@model CalculatePi.Web.Pages.CalculatePiModel
+@{
+    ViewData["Title"] = "CalculatePi";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<html>
+<body>
+    <h1>CalculatePi</h1>
+    <div asp-validation-summary="All"></div>
+    <form method="POST">
+        <div>Iterations: <input asp-for="Iterations" /> <input type="submit" value="Calculate"/></div>
+        <div>@Model.Result</div>
+    </form>
+</body>
+</html>
