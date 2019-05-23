@@ -3,13 +3,17 @@ phases:
   pre_build:
     commands:
       - pip install --upgrade awscli
-      - dotnet restore AspNetCoreWebApplication/AspNetCoreWebApplication.csproj
-      - dotnet restore AspNetCoreWebApplicationTest/AspNetCoreWebApplicationTest.csproj
+      - dotnet restore CalculatePi/CalculatePi/CalculatePi.Library.csproj
+      - dotnet restore CalculatePi/CalculatePi.Test/CalculatePi.Test.csproj
+      - dotnet restore CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
+      - dotnet restore CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
   build:
     commands:
-      - dotnet publish -c release -o ./build_output AspNetCoreWebApplication/AspNetCoreWebApplication.csproj
-      - dotnet publish -c release -o ./test_output AspNetCoreWebApplicationTest/AspNetCoreWebApplicationTest.csproj
-      - dotnet vstest AspNetCoreWebApplicationTest/test_output/AspNetCoreWebApplicationTest.dll
+      - dotnet publish -c release -o ./build_output CalculatePI/CalculatePi/CalculatePi.Library.csproj
+      - dotnet publish -c release -o ./test_output CalculatePI/CalculatePi.Test/CalculatePi.Test.csproj
+      - dotnet publish -c release -o ./build_output CalculatePI/CalculatePi.CLI/CalculatePi.CLI.csproj
+      - dotnet publish -c release -o ./build_output CalculatePI/CalculatePi.Web/CalculatePi.Web.csproj
+      - dotnet vstest CalculatePi/test_output/CalculatePi.Test.dll
   post_build:
     commands:
 
