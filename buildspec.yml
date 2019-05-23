@@ -4,7 +4,7 @@ phases:
     commands:
       - pip install --upgrade awscli
       - dotnet restore CalculatePi/CalculatePi/CalculatePi.Library.csproj
-      - dotnet restore CalculatePi/CalculatePi.Test/CalculatePi.Test.csproj
+      - dotnet restore CalculatePi/CalculatePi.Test/CalculatePi.Library.Test.csproj
       - dotnet restore CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
       - dotnet restore CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
   build:
