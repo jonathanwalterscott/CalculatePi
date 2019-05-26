@@ -19,6 +19,7 @@ phases:
       - dotnet publish -c release -o ./build_output CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
       - dotnet publish -c release -o ./build_output CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
       - dir ./
+      - find . -name test_output
       - dotnet vstest ./test_output/CalculatePi.Test.dll
   post_build:
     commands:
