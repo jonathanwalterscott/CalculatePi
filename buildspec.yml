@@ -21,7 +21,7 @@ phases:
       - dir ./
       - ls -la $(find . -name test_output)
       - pwd
-      - dotnet vstest CalculatePi/CalculatePi/test_output/test_output/CalculatePi.Test.dll
+      - dotnet vstest CalculatePi/CalculatePi.Test/test_output/CalculatePi.Test.dll
   post_build:
     commands:
 
