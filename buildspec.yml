@@ -18,9 +18,6 @@ phases:
       - dotnet build -c release -o ./build_output CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
       - dotnet build -c release -o ./build_output CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
 
-      - dotnet publish -c release -o ./build_output CalculatePi/CalculatePi/CalculatePi.Library.csproj
-      - dotnet publish -c release -o ./test_output CalculatePi/CalculatePi.Test/CalculatePi.Library.Test.csproj
-      - dotnet publish -c release -o ./build_output CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
       - dotnet publish -c release -o ./build_output CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
 
       - dotnet vstest CalculatePi/CalculatePi.Test/test_output/CalculatePi.Library.Test.dll
@@ -33,7 +30,7 @@ phases:
 artifacts:
   files:
     - template.yml
-    - AspNetCoreWebApplication/build_output/**/*
+    - CalculatePi/CalculatePi.Web/build_output/**/*
     - scripts/**/*
     - appspec.yml
     - template-configuration.json
