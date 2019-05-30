@@ -30,7 +30,7 @@ phases:
 artifacts:
   files:
     - template.yml
-    - ./CalculatePi/CalculatePi.Web/build_output/**/*
-    - scripts/**/*
-    - appspec.yml
-    - template-configuration.json
+    # - ./CalculatePi/CalculatePi.Web/build_output/**/*
+    # - scripts/**/*
+    # - appspec.yml
+    # - template-configuration.json
