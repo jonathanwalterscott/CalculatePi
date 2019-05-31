@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: CalculatePi/build_output
+  - source: CalculatePi/CalculatePi.Web/build_output
     destination: /home/ubuntu/calculatepi
   - source: scripts/virtualhost.conf
     destination: /home/ubuntu/calculatepi
