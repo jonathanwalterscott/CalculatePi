@@ -1,10 +1,10 @@
 version: 0.0
 os: linux
 files:
-  - source: AspNetCoreWebApplication/build_output
-    destination: /home/ubuntu/aspnetcoreapp
+  - source: CalculatePi/build_output
+    destination: /home/ubuntu/calculatepi
   - source: scripts/virtualhost.conf
-    destination: /home/ubuntu/aspnetcoreapp
+    destination: /home/ubuntu/calculatepi
   - source: scripts/kestrel-aspnetcoreapp.service
     destination: /etc/systemd/system/
 hooks:
