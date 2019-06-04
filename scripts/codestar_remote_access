@@ -19,7 +19,7 @@ echo 'AuthorizedKeysCommand /usr/local/bin/get_authorized_keys' >> /etc/ssh/sshd
 echo 'AuthorizedKeysCommandUser root' >> /etc/ssh/sshd_config
 service sshd restart
 wait_for_dpkg_lock
-apt-get install python-pip -y
+yum install python-pip -y
 pip install --upgrade --user awscli
 # Install pip and python dev libraries.
 pip install boto3
