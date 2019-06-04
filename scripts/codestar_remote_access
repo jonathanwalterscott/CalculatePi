@@ -19,9 +19,15 @@ echo 'AuthorizedKeysCommand /usr/local/bin/get_authorized_keys' >> /etc/ssh/sshd
 echo 'AuthorizedKeysCommandUser root' >> /etc/ssh/sshd_config
 service sshd restart
 wait_for_dpkg_lock
+echo "101"
 yum install python-pip -y
+echo "102"
 pip install --upgrade --user awscli
+echo "103"
 # Install pip and python dev libraries.
 pip install boto3
+echo "104"
 pip install boto
+echo "105"
 pip install pycrypto
+echo "106"
