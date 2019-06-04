@@ -1,8 +1,7 @@
 #!/bin/bash
-cd /home/ubuntu/
+cd ~
 
 # install dotnet core
-# https://www.microsoft.com/net/core#linuxubuntu
 if [ ! -f /usr/bin/dotnet ]; then
     yum install libunwind8
 
