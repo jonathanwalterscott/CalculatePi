@@ -4,7 +4,7 @@ cd /home/ubuntu/
 # install dotnet core
 # https://www.microsoft.com/net/core#linuxubuntu
 if [ ! -f /usr/bin/dotnet ]; then
-    apt-get install libunwind8
+    yum install libunwind8
 
     # wget https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-linux-x64.tar.gz -P /opt/dotnet/ \
     wget https://download.visualstudio.microsoft.com/download/pr/ece856bb-de15-4df3-9677-67cc817ffc1b/521da52132d23deae5400b8e19e23691/dotnet-sdk-2.2.204-linux-x64.tar.gz -P /opt/dotnet/ \
