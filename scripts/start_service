@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ubuntu/
+cd 〜
 
 # use systemd to start and monitor dotnet application
 systemctl enable kestrel-aspnetcoreapp.service
