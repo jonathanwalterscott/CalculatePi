@@ -1,3 +1,4 @@
 #!/bin/bash
 rm -rf /home/www-user/calculatepi
 rm -rf /etc/systemd/system/kestrel-CalculatePi.service
+rm -rf /etc/httpd/conf.d/virtualhost.CalculatePi.conf

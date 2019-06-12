@@ -3,8 +3,8 @@ os: linux
 files:
   - source: CalculatePi.Web/build_output
     destination: /home/www-user/calculatepi
-  - source: scripts/virtualhost.conf
-    destination: /home/www-user/calculatepi
+  - source: scripts/virtualhost.CalculatePi.conf
+    destination: /etc/httpd/conf.d/
   - source: scripts/kestrel-CalculatePi.service
     destination: /etc/systemd/system/
 hooks:
