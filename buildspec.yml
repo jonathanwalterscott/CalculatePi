@@ -13,7 +13,7 @@ phases:
       - dotnet restore CalculatePi.Web/CalculatePi.Web.csproj
   build:
     commands:
-      - dotnet build -c release -o ./build_output CalculatePi/CalculatePi.Library.csproj
+      - dotnet build -c release -o ./build_output CalculatePi.Library/CalculatePi.Library.csproj
       - dotnet build -c release -o ./test_output CalculatePi.Test/CalculatePi.Library.Test.csproj
       - dotnet build -c release -o ./build_output CalculatePi.CLI/CalculatePi.CLI.csproj
       - dotnet build -c release -o ./build_output CalculatePi.Web/CalculatePi.Web.csproj

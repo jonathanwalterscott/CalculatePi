@@ -1,17 +1,26 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{89A0A19C-51DF-4C45-B4BD-DB50FA792259}|Default">
   <MonoDevelop.Ide.ItemProperties.CalculatePi.Library.Test PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CalculatePi.git Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="scripts/virtualhost.conf">
     <Files>
-      <File FileName="buildspec.yml" Line="33" Column="8" />
+      <File FileName="buildspec.yml" Line="16" Column="70" />
       <File FileName="CalculatePi.git Status" />
+      <File FileName="appspec.yml" Line="4" Column="13" />
+      <File FileName="scripts/codestar_remote_access" Line="1" Column="1" />
+      <File FileName="scripts/install_dotnetcore" Line="1" Column="1" />
+      <File FileName="scripts/kestrel-aspnetcoreapp.service" Line="1" Column="1" />
+      <File FileName="scripts/remove_application" Line="1" Column="1" />
+      <File FileName="scripts/start_service" Line="1" Column="1" />
+      <File FileName="scripts/stop_service" Line="1" Column="1" />
+      <File FileName="scripts/virtualhost.conf" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CalculatePi" expanded="True">
-            <Node name="Solution Items" expanded="True">
-              <Node name="/Users/jwscott/Projects/jonathanwalterscott/CalculatePi.git/buildspec.yml" selected="True" />
+            <Node name="scripts" expanded="True">
+              <Node name="/Users/jwscott/Projects/jonathanwalterscott/CalculatePi.git/scripts/virtualhost.conf" selected="True" />
             </Node>
+            <Node name="Solution Items" expanded="True" />
           </Node>
         </State>
       </Pad>
