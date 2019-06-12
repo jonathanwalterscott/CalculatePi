@@ -1,5 +1,4 @@
 #!/bin/bash
-cd 〜
 
 # use systemd to start and monitor dotnet application
 systemctl enable kestrel-CalculatePi.service
