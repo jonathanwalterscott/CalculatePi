@@ -5,3 +5,4 @@ systemctl stop httpd.service
 
 # stop dotnet application
 systemctl stop kestrel-CalculatePi.service
+systemctl disable kestrel-CalculatePi.service
