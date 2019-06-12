@@ -1,0 +1,27 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{89A0A19C-51DF-4C45-B4BD-DB50FA792259}|Default">
+  <MonoDevelop.Ide.ItemProperties.CalculatePi.Library.Test PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CalculatePi.git Status">
+    <Files>
+      <File FileName="buildspec.yml" Line="33" Column="8" />
+      <File FileName="CalculatePi.git Status" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CalculatePi" expanded="True">
+            <Node name="Solution Items" expanded="True">
+              <Node name="/Users/jwscott/Projects/jonathanwalterscott/CalculatePi.git/buildspec.yml" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CalculatePi.CLI PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

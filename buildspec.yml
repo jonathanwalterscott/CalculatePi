@@ -7,20 +7,20 @@ phases:
   pre_build:
     commands:
       - pip install --upgrade awscli
-      - dotnet restore CalculatePi/CalculatePi/CalculatePi.Library.csproj
-      - dotnet restore CalculatePi/CalculatePi.Test/CalculatePi.Library.Test.csproj
-      - dotnet restore CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
-      - dotnet restore CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
+      - dotnet restore CalculatePi.Library/CalculatePi.Library.csproj
+      - dotnet restore CalculatePi.Test/CalculatePi.Library.Test.csproj
+      - dotnet restore CalculatePi.CLI/CalculatePi.CLI.csproj
+      - dotnet restore CalculatePi.Web/CalculatePi.Web.csproj
   build:
     commands:
-      - dotnet build -c release -o ./build_output CalculatePi/CalculatePi/CalculatePi.Library.csproj
-      - dotnet build -c release -o ./test_output CalculatePi/CalculatePi.Test/CalculatePi.Library.Test.csproj
-      - dotnet build -c release -o ./build_output CalculatePi/CalculatePi.CLI/CalculatePi.CLI.csproj
-      - dotnet build -c release -o ./build_output CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
+      - dotnet build -c release -o ./build_output CalculatePi/CalculatePi.Library.csproj
+      - dotnet build -c release -o ./test_output CalculatePi.Test/CalculatePi.Library.Test.csproj
+      - dotnet build -c release -o ./build_output CalculatePi.CLI/CalculatePi.CLI.csproj
+      - dotnet build -c release -o ./build_output CalculatePi.Web/CalculatePi.Web.csproj
 
-      - dotnet publish -c release -o ./build_output CalculatePi/CalculatePi.Web/CalculatePi.Web.csproj
+      - dotnet publish -c release -o ./build_output CalculatePi.Web/CalculatePi.Web.csproj
 
-      - dotnet vstest CalculatePi/CalculatePi.Test/test_output/CalculatePi.Library.Test.dll
+      - dotnet vstest CalculatePi.Test/test_output/CalculatePi.Library.Test.dll
   post_build:
     commands:
 
@@ -30,7 +30,7 @@ phases:
 artifacts:
   files:
     - template.yml
-    - ./CalculatePi/CalculatePi.Web/build_output/**/*
+    - ./CalculatePi.Web/build_output/**/*
     - scripts/**/*
     - appspec.yml
     - template-configuration.json

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalculatePi\CalculatePi.Library.csproj" />
+    <ProjectReference Include="..\CalculatePi.Library\CalculatePi.Library.csproj" />
   </ItemGroup>
 
 </Project>
