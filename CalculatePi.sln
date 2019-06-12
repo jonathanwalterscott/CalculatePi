@@ -17,13 +17,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{6D039B1D-BD6A-4C58-B7AE-02CF2D9A3FEE}"
 	ProjectSection(SolutionItems) = preProject
 		scripts\remove_application = scripts\remove_application
-		scripts\kestrel-aspnetcoreapp.service = scripts\kestrel-aspnetcoreapp.service
-		scripts\virtualhost.conf = scripts\virtualhost.conf
 		scripts\start_service = scripts\start_service
 		scripts\install_dotnetcore = scripts\install_dotnetcore
 		scripts\install_httpd = scripts\install_httpd
 		scripts\codestar_remote_access = scripts\codestar_remote_access
 		scripts\stop_service = scripts\stop_service
+		scripts\kestrel-CalculatePi.service = scripts\kestrel-CalculatePi.service
+		scripts\virtualhost.CalculatePi.conf = scripts\virtualhost.CalculatePi.conf
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{931A8730-A694-44C0-84A4-4B3BAFCB9A6B}"
