@@ -25,6 +25,3 @@ pip install --upgrade --user awscli
 pip install boto3
 pip install boto
 pip install pycrypto
-# Install service
-HTTPD_CONF=/etc/httpd/conf.d/
-cp /home/www-user/calculatepi/virtualhost.CalculatePi.conf $HTTPD_CONF
