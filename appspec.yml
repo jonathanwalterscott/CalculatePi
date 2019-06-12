@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: CalculatePi/CalculatePi.Web/build_output
-    destination: /home/ec2-user/calculatepi
+    destination: /home/www-user/calculatepi
   - source: scripts/virtualhost.conf
-    destination: /home/ec2-user/calculatepi
+    destination: /home/www-user/calculatepi
   - source: scripts/kestrel-aspnetcoreapp.service
     destination: /etc/systemd/system/
 hooks:
@@ -35,4 +35,4 @@ hooks:
   ApplicationStart:
     - location: scripts/start_service
       timeout: 300
-      runas: root
+      runas: www-user
