@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.Net;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CalculatePi.Web
 {
@@ -14,11 +15,36 @@ namespace CalculatePi.Web
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHost(args).Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        public static IWebHost CreateWebHost(string[] args)
+        {
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var config = new ConfigurationBuilder()
+                .SetBasePath("/home/www-user/calculatepi/")
+                .AddJsonFile("appsettings.json", optional: true)
+                .AddJsonFile($"appsettings.{environment}.json", optional: true)
+                .AddEnvironmentVariables()
+                .Build();
+
+            var webHost = WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .UseKestrel(options =>
+                {
+                    options.Listen(IPAddress.Loopback, 5001, listenOptions =>
+                    {
+                        var certificateSettings = config.GetSection("certificate");
+                        var certificateFileName = certificateSettings.GetValue<string>("filename");
+                        var certificatePassword = "bleh";
+                        var cert = new X509Certificate2(certificateFileName, certificatePassword);
+
+                        listenOptions.UseHttps(cert);
+
+                    });
+                })
+                .Build();
+            return webHost;
+        }
     }
 }

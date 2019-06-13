@@ -21,4 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CalculatePi.Library\CalculatePi.Library.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove=".CalculatePi.Web.csproj.swp" />
+  </ItemGroup>
 </Project>
