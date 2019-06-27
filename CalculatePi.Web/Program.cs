@@ -25,6 +25,8 @@ namespace CalculatePi.Web
                 .AddEnvironmentVariables()
                 .Build();
 
+            System.Console.WriteLine($"Environment = {environment}");
+
             var webHost = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseKestrel(options =>
@@ -32,6 +34,7 @@ namespace CalculatePi.Web
                     options.Listen(IPAddress.Loopback, 5001, listenOptions =>
                     {
                         var certificateSettings = config.GetSection("certificate");
+                        System.Console.WriteLine($"certificateSettings = {certificateSettings.ToString()}");
                         var certificateFileName = certificateSettings.GetValue<string>("filename");
                         var certificatePassword = "bleh";
                         var cert = new X509Certificate2(certificateFileName, certificatePassword);
