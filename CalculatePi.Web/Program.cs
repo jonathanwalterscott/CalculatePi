@@ -34,7 +34,7 @@ namespace CalculatePi.Web
                     options.Listen(IPAddress.Loopback, 5001, listenOptions =>
                     {
                         var certificateSettings = config.GetSection("certificate");
-                        System.Console.WriteLine($"certificateSettings = {certificateSettings.ToString()}");
+                        System.Console.WriteLine($"certificateSettings = {certificateSettings.Value}");
                         var certificateFileName = certificateSettings.GetValue<string>("filename");
                         var certificatePassword = "bleh";
                         var cert = new X509Certificate2(certificateFileName, certificatePassword);
