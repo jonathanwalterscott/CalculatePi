@@ -35,7 +35,7 @@ namespace CalculatePi.Web
                     {
                         var certificateSettings = config.GetSection("certificate");
                         var certificateFileName = certificateSettings.GetValue<string>("filename");
-                        var certificatePassword = "bleh";
+                        var certificatePassword = certificateSettings.GetValue<string>("password");
                         var cert = new X509Certificate2(certificateFileName, certificatePassword);
 
                         listenOptions.UseHttps(cert);
