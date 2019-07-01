@@ -47,7 +47,6 @@ namespace CalculatePi.Web
             }
 
             app.UseForwardedHeaders();
-            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
 

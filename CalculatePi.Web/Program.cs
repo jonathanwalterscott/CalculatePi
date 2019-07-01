@@ -30,19 +30,6 @@ namespace CalculatePi.Web
             var webHost = WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .UseKestrel()
-                //.UseKestrel(options =>
-                //{
-                //    options.Listen(IPAddress.Loopback, 5001, listenOptions =>
-                //    {
-                //        var certificateSettings = config.GetSection("certificate");
-                //        var certificateFileName = certificateSettings.GetValue<string>("filename");
-                //        var certificatePassword = certificateSettings.GetValue<string>("password");
-                //        var cert = new X509Certificate2(certificateFileName, certificatePassword);
-
-                //        listenOptions.UseHttps(cert);
-
-                //    });
-                //})
                 .PreferHostingUrls(true)
                 .Build();
             return webHost;
