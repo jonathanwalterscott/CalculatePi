@@ -24,3 +24,7 @@
 /CalculatePi.Library/obj
 /CalculatePi.Test/obj
 /CalculatePi.Web/obj
+/CalculatePi.CLI/bin/Debug/netcoreapp2.1
+/CalculatePi.Library/bin/Debug/netstandard2.0
+/CalculatePi.Test/bin/Debug/netcoreapp2.1
+/CalculatePi.Web/bin/Debug/netcoreapp2.1
