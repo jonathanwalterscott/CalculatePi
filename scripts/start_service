@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set ASPNETCORE_ENVIRONMENT=Production
+export ASPNETCORE_ENVIRONMENT=Production
 
 # use systemd to start and monitor dotnet application
 systemctl enable kestrel-CalculatePi.service
