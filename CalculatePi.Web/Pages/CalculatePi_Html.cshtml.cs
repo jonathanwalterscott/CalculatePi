@@ -17,13 +17,16 @@ namespace CalculatePi.Web.Pages
 
         [BindProperty]
         public List<SelectListItem> Models { get; private set; }
+
         [BindProperty]
         [Required (ErrorMessage = "Model is required")]
         public string ModelToUse { get; set; }
+
         [BindProperty]
         [Required]
         [Range(0,100000000)]
         public int Iterations { get; set; }
+
         [BindProperty]
         public string Result { get; set; }
 
