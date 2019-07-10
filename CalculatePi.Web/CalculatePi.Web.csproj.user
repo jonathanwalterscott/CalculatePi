@@ -9,9 +9,4 @@
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
-    <StartAction>Project</StartAction>
-    <StartArguments>--urls http://localhost:5001</StartArguments>
-    <ApplicationURL>https://calculatepi.jonathanscott.dev:5001</ApplicationURL>
-  </PropertyGroup>
 </Project>

@@ -1,18 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using CalculatePi.Library;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace CalculatePi.Web.Pages
 {
     public class CalculatePiModel : PageModel
     {
-        public CalculatePiModel()
+        private readonly IHttpClientFactory ClientFactory;
+
+        public CalculatePiModel(IHttpClientFactory clientFactory)
         {
             Iterations = 0;
             Result = "";
+            ClientFactory = clientFactory;
         }
 
         [BindProperty]
@@ -39,7 +43,7 @@ namespace CalculatePi.Web.Pages
             return Page();
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost()
         {
             Models = new List<SelectListItem> {
                 new SelectListItem { Value = "Gregory-Leibniz", Text = "Gregory-Leibniz"},
@@ -50,21 +54,18 @@ namespace CalculatePi.Web.Pages
                 Result = "";
                 return Page();
             }
-            IterativeMethod pi = null;
-            switch (ModelToUse)
+            var httpClient = ClientFactory.CreateClient("CalculatePiAPI");
+            httpClient.BaseAddress = new System.Uri("http://localhost:5001/api/CalculatePi/");
+            var result = await httpClient.GetAsync(Iterations + "/" + ModelToUse);
+            if (result.IsSuccessStatusCode)
             {
-                case "Gregory-Leibniz" :
-                    pi = new Gregory_Leibniz();
-                    break;
-                case "Nilikantha":
-                    pi = new Nilikantha();
-                    break;
-                default:
-                    throw new System.Exception($"Could not find [{ModelToUse}] model.");
+                Result = $"Result = {await result.Content.ReadAsStringAsync()}";
             }
-            pi.NumberOfIterations = Iterations;
-            var result = pi.Calculate();
-            Result = $"Result = {result}";
+            else
+            {
+                Result = $"Error {result.ReasonPhrase}";
+                return Page();
+            }
             return Page();
         }
     }
