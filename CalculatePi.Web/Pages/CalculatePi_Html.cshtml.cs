@@ -5,18 +5,21 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Microsoft.Extensions.Configuration;
 
 namespace CalculatePi.Web.Pages
 {
     public class CalculatePiModel : PageModel
     {
-        private readonly IHttpClientFactory ClientFactory;
+        private readonly IConfiguration _config;
+        private readonly IHttpClientFactory _clientFactory;
 
-        public CalculatePiModel(IHttpClientFactory clientFactory)
+        public CalculatePiModel(IConfiguration config, IHttpClientFactory clientFactory)
         {
             Iterations = 0;
             Result = "";
-            ClientFactory = clientFactory;
+            _config = config;
+            _clientFactory = clientFactory;
         }
 
         [BindProperty]
@@ -54,8 +57,10 @@ namespace CalculatePi.Web.Pages
                 Result = "";
                 return Page();
             }
-            var httpClient = ClientFactory.CreateClient("CalculatePiAPI");
-            httpClient.BaseAddress = new System.Uri("http://localhost:5001/api/CalculatePi/");
+            var httpClient = _clientFactory.CreateClient("CalculatePiAPI");
+            IConfigurationSection webAPISection = _config.GetSection("WebAPI");
+            string baseAddress = webAPISection.GetValue<string>("BaseAddress");
+            httpClient.BaseAddress = new System.Uri(baseAddress);
             var result = await httpClient.GetAsync(Iterations + "/" + ModelToUse);
             if (result.IsSuccessStatusCode)
             {
